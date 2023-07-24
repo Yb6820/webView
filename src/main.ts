@@ -1,7 +1,11 @@
-import Antd from 'ant-design-vue'
+import { useAntUIs } from './plugins/antui'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { useIcons } from './plugins/icon'
 
-createApp(App).use(Antd).use(store).use(router).mount('#app')
+const app=createApp(App);
+app.use(store).use(router).mount('#app')
+useAntUIs(app);
+useIcons(app);
