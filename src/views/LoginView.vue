@@ -2,8 +2,9 @@
   <div class="container">
     <div class="loginBox">
       <a-form
-      :label-col="{ span: 8 }"
+      :label-col="{ span: 6 }"
       :wrapper-col="{ span: 16 }"
+      class="loginForm"
       >
         <a-form-item
         label="用户名"
@@ -31,9 +32,11 @@
           <a-button
           type="primary"
           html-type="submit"
+          style="margin: 10px;"
           >登录</a-button>
           <a-button
           type="info"
+          style="margin: 10px;"
           >取消</a-button>
         </a-form-item>
       </a-form>
@@ -41,7 +44,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive } from 'vue';
 interface FormState{
   username:string;
   password:string;
@@ -56,7 +59,7 @@ const formState=reactive<FormState>({
 
 <style scoped>
 .container{
-  width: 100%;
+  height: 100%;
   background-color:lightgrey;
 }
 .loginBox{
@@ -65,10 +68,20 @@ const formState=reactive<FormState>({
   left: calc(50% - 225px);
   width: 450px;
   height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.loginForm{
+  width: 100%;
+  position: absolute;
+  padding: 20px;
   bottom: 10%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .loginBtn{
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
 }
 </style>
