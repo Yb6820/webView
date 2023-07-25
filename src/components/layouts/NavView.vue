@@ -1,41 +1,52 @@
 <template>
   <a-layout-sider v-model:collapsed="collapsed" collapsible>
-    <div class="logo"></div>
-    <a-menu
-    theme="dark"
-    mode="inline"
-    :style="{ lineHeight: '64px' }"
-    >
-      <a-menu-item key="1">
-        <template #title>
-          <span>
-            <user-outlined />
-            Menu
-          </span>
-        </template>
-      </a-menu-item>
-      <s-sub-menu>
-        <a-menu-item>
+      <div class="logo" />
+      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
+        <a-menu-item key="1">
+          <pie-chart-outlined />
+          <span>Option 1</span>
+        </a-menu-item>
+        <a-menu-item key="2">
+          <desktop-outlined />
+          <span>Option 2</span>
+        </a-menu-item>
+        <a-sub-menu key="sub1">
           <template #title>
             <span>
-              <!-- 图标 -->
-              子Menu1
+              <user-outlined />
+              <span>User</span>
             </span>
           </template>
-        </a-menu-item>
-        <a-menu-item>
+          <a-menu-item key="3">Tom</a-menu-item>
+          <a-menu-item key="4">Bill</a-menu-item>
+          <a-menu-item key="5">Alex</a-menu-item>
+        </a-sub-menu>
+        <a-sub-menu key="sub2">
           <template #title>
             <span>
-              <!-- 图标 -->
-              子Menu12
+              <team-outlined />
+              <span>Team</span>
             </span>
           </template>
+          <a-menu-item key="6">Team 1</a-menu-item>
+          <a-menu-item key="8">Team 2</a-menu-item>
+        </a-sub-menu>
+        <a-menu-item key="9">
+          <file-outlined />
+          <span>File</span>
         </a-menu-item>
-      </s-sub-menu>
-    </a-menu>
-  </a-layout-sider>
+      </a-menu>
+    </a-layout-sider>
 </template>
-<script lang="ts" setup>
-import {ref} from 'vue'
-const collapsed=ref<boolean>(false);
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  name:"NavView",
+  setup(){
+    const collapsed=ref<boolean>(false);
+    return {
+      collapsed
+    };
+  }
+})
 </script>

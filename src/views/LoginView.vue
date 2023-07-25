@@ -28,16 +28,9 @@
             </template>
           </a-input-password>
         </a-form-item>
-        <a-form-item class="loginBtn">
-          <a-button
-          type="primary"
-          html-type="submit"
-          style="margin: 10px;"
-          >登录</a-button>
-          <a-button
-          type="info"
-          style="margin: 10px;"
-          >取消</a-button>
+        <a-form-item :wrapper-col="{ span: 16, offset: 8 }" class="loginBtn">
+          <a-button type="primary" html-type="submit" style="margin: 10px;">登录</a-button>
+          <a-button type="info" style="margin: 10px;">取消</a-button>
         </a-form-item>
       </a-form>
     </div>
@@ -63,12 +56,12 @@ const formState=reactive<FormState>({
   background-color:lightgrey;
 }
 .loginBox{
-  position: absolute;
-  top: calc(50% - 150px);
-  left: calc(50% - 225px);
   width: 450px;
   height: 300px;
   background-color: #fff;
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 225px);
   border-radius: 10px;
 }
 .loginForm{
@@ -80,8 +73,6 @@ const formState=reactive<FormState>({
   box-sizing: border-box;
 }
 .loginBtn{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  margin-left: 100px;
 }
 </style>
