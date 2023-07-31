@@ -11,6 +11,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'admin',
     component: AdminView
+  },
+  {
+    path:'/hotel',
+    name:'hotel',
+    component:()=>import ('../components/hotel/HotelList.vue')
   }
 ]
 

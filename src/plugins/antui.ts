@@ -4,7 +4,8 @@ import {
     Form,
     Input,
     Layout,
-    Menu
+    Menu,
+    Table
 } from 'ant-design-vue';
 import type { App } from "vue";
 
@@ -16,4 +17,5 @@ export const useAntUIs=(app:App)=>{
     .use(Checkbox)
     .use(Layout)
     .use(Menu)
+    .use(Table)
 }

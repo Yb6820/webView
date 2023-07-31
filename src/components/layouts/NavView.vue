@@ -6,7 +6,7 @@
           <pie-chart-outlined />
           <span>Option 1</span>
         </a-menu-item>
-        <a-menu-item key="2">
+        <a-menu-item key="hotel">
           <desktop-outlined />
           <span>Option 2</span>
         </a-menu-item>
