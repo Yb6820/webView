@@ -5,7 +5,13 @@ import {
     Input,
     Layout,
     Menu,
-    Table
+    Table,
+    Card,
+    Pagination,
+    DatePicker,
+    Select,
+    Upload,
+    Modal
 } from 'ant-design-vue';
 import type { App } from "vue";
 
@@ -18,4 +24,10 @@ export const useAntUIs=(app:App)=>{
     .use(Layout)
     .use(Menu)
     .use(Table)
+    .use(Card)
+    .use(Pagination)
+    .use(DatePicker)
+    .use(Select)
+    .use(Upload)
+    .use(Modal)
 }
