@@ -29,5 +29,3 @@ git checkout -b test_15067 # 在本地新建分支
 git pull origin test_15067 # 拉取远程分支的代码
 git push origin test_15067 # 提交代码到远程仓库
 ```
-
-
