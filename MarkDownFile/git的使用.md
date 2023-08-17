@@ -29,3 +29,14 @@ git checkout -b test_15067 # 在本地新建分支
 git pull origin test_15067 # 拉取远程分支的代码
 git push origin test_15067 # 提交代码到远程仓库
 ```
+
+# 远程仓库管理
+
+```shell
+git remote add <name> <url>  //添加远程仓库源
+git remote rename <name> <newname>  //重命名源
+git remote remove <name>  //删除远程仓库源
+git remote -v   //查看本地远程仓库源
+git branch -M <branchname>  
+git push -uf <originname> <branch>  //强行提交代码
+```
