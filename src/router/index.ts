@@ -16,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
     path:'/hotel',
     name:'hotel',
     component:()=>import ('../components/hotel/HotelList.vue')
+  },
+  {
+    path:'/md',
+    name:'md',
+    component:()=>import('../components/md/MarkDown.vue')
   }
 ]
 

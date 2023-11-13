@@ -1,17 +1,21 @@
 <template>
-    <div>
-        <a-table
+  <div>
+    <a-table
         :columns="columns"
         :dataSource="hotelList"
         rowKey="ID"
         :scroll="{x:2000}"
-        >
-        </a-table>
-    </div>
+    >
+    </a-table>
+  </div>
+  <div v-html="markedToHTML">
+
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import {marked} from "marked";
 export default defineComponent({
   name:"HotelList",
   setup(){
@@ -70,13 +74,16 @@ const hotelList= [
         {ID:4,name:'国际大酒店',location:'广州',evaluate:'5',phone:'123456789'},
       ];
       columns[0].fixed='left';
-      columns[2].fixed='left'
+      columns[2].fixed='left';
+    const markedToHTML =marked('# 标题');
     return {
       columns,
-      hotelList
+      hotelList,
+      markedToHTML,
     };
   }
 })
+
 </script>
 
 <style scoped>
